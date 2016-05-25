@@ -1,0 +1,96 @@
+<html  ng-app="svocAdminApp" style="height: 100%;">
+
+<head>
+    <!-- UTF8 definition are important for NVD3 -->
+    <meta charset="utf-8"></meta>
+
+    <!-- For proper rendering and touch zooming for Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Disables zooming but allows scrolling for Bootstrap to feel like a native app -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <title>
+        SVOC Administration
+    </title>
+
+    <!-- Defining angular -->
+    <script src="common/lib/angular/angular.js"></script> 
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>  -->
+    <script src="common/lib/jquery/dist/jquery.min.js"></script>
+    <script src="common/lib/angularnoty/ng-notify.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
+  	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
+	<!--<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>-->
+
+	<script src="common/lib/ui-grid/ui-grid.min.js"></script>
+ 	<link rel="styleSheet" href="common/lib/ui-grid/ui-grid.min.css"/> 
+	<!-- <link rel="stylesheet" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css" />-->
+ 	<link href="common/lib/angularnoty/ng-notify.min.css" rel="stylesheet" type="text/css">
+ 
+    <script src="app.js"></script>
+	<script src="js/controllers/storeController.js"></script>
+	<script src="js/services/storeService.js"></script>
+
+    <script src="common/lib/angularjs-filters/filters.js"></script>
+    <script src="common/lib/angular-cookies/angular-cookies.min.js"></script>
+    
+
+    <!-- or use another assembly -->
+    <script src="common/lib/angularjs-filters/filters.js"></script>
+
+    <!-- Include UI Bootstrap -->
+    <script src="common/lib/uib/ui-bootstrap-tpls-1.1.2.js"></script>
+
+
+    <!-- Defining our css -->
+    <link rel="stylesheet" href="common/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="common/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="common/lib/font-awesome-animation/dist/font-awesome-animation.min.css">
+    <link rel="stylesheet" href="common/styles/faIcons.css">
+    <link rel="stylesheet" href="common/styles/ua.css">
+
+    <style>
+        /* Hide google logo because we're like that */
+        a[href^="http://maps.google.com/maps"]{display:none !important}
+        a[href^="https://maps.google.com/maps"]{display:none !important}
+    </style>
+    <script type="text/javascript">
+    angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
+  </script>
+</head>
+
+<body >
+
+<a href="/"><img src="https://www.underarmour.com/static/media/header/logo.png" style="position:fixed; top:0px; left:0px; height:50px; width:60px;"/></a>
+    
+	<!--  	  <a href="/"><img src="../images/logo.png" style="position:fixed; top:0px; left:0px; height:50px; width:60px;"/></a>    -->
+
+	
+  <div style="margin-left:50px;background-color:#E62A2A;height:50px;color:white;font-size:large;" >
+  Choose From:&nbsp;&nbsp;
+  <a style="color:white" href="Store">Stores</a> |
+<!--  <a style="color:white" href="Book/Moby/ch/1">Table 2</a> |
+  <a style="color:white" href="Book/Gatsby">Table 3</a> |   --> 
+</div>
+
+<br/>
+
+  <div class="view-animate-container">
+  	<div noty-container></div> 
+    <div ng-view class="view-animate"></div>
+  </div>
+
+</body>
+</html>
+
+
+<!--    <img src="https://www.underarmour.com/static/media/header/logo.png" style="position:fixed; bottom:0px; left:0px; height:50px; width:50px;"/> -->
+
+</html>
+
+
+
+
+
+
+
